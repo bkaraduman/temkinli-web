@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Temkinli · Temkinli ol.</title>
+<meta name="description" content="Kaza, kayıp, arıza, resmi işler ve hayatın önemli anları için Türkiye'ye özel, internetsiz çalışan adım adım rehberler.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+<style>
+:root{--bg:#eef2f9;--soft:#f6f8fc;--card:#ffffff;--surface2:#f4f7fc;--ink:#15233f;--ink2:#5a6a86;--ink3:#94a1b8;--line:#e7ecf4;--accent:#1b3b6f;--btn:#1b3b6f;--btn-h:#17325e;--accent-bg:#eaeef4;--sh:0 8px 18px rgba(20,40,90,.07);--sh2:0 12px 28px rgba(20,40,90,.12)}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1626;--soft:#101b2e;--card:#16233c;--surface2:#1b2a45;--ink:#ecf1fa;--ink2:#a3b4d2;--ink3:#7d8eab;--line:#223453;--accent:#9fc0ff;--btn:#2a5391;--btn-h:#32609f;--accent-bg:#1b2a45;--sh:0 8px 18px rgba(0,0,0,.25);--sh2:0 12px 28px rgba(0,0,0,.35)}}
+[data-theme="light"]{--bg:#eef2f9;--soft:#f6f8fc;--card:#ffffff;--surface2:#f4f7fc;--ink:#15233f;--ink2:#5a6a86;--ink3:#94a1b8;--line:#e7ecf4;--accent:#1b3b6f;--btn:#1b3b6f;--btn-h:#17325e;--accent-bg:#eaeef4;--sh:0 8px 18px rgba(20,40,90,.07);--sh2:0 12px 28px rgba(20,40,90,.12)}
+[data-theme="dark"]{--bg:#0d1626;--soft:#101b2e;--card:#16233c;--surface2:#1b2a45;--ink:#ecf1fa;--ink2:#a3b4d2;--ink3:#7d8eab;--line:#223453;--accent:#9fc0ff;--btn:#2a5391;--btn-h:#32609f;--accent-bg:#1b2a45;--sh:0 8px 18px rgba(0,0,0,.25);--sh2:0 12px 28px rgba(0,0,0,.35)}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--ink);text-decoration:underline}
+h1,h2,h3,p{margin:0}
+</style>
+</helmet>
+
+<div data-theme="{{ theme }}" style="background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;font-weight:600;font-size:17px;line-height:1.5;min-height:100vh">
+
+<header data-screen-label="Hero" style="position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 88% 8%, rgba(143,182,255,.14), transparent 42%), radial-gradient(circle at 6% 94%, rgba(94,224,192,.12), transparent 40%), linear-gradient(135deg,#234b86 0%,#16315c 55%,#0f2342 100%)">
+  <div style="max-width:1160px;margin:0 auto;padding:20px clamp(20px,5vw,40px) 0;display:flex;align-items:center;justify-content:space-between;gap:16px">
+    <a href="#" style="display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none">
+      <span style="width:44px;height:44px;border-radius:14px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);display:grid;place-items:center"><i class="ph-fill ph-compass" style="font-size:24px;color:#fff"></i></span>
+      <span style="font-weight:900;font-size:19px;letter-spacing:-0.02em">Temkinli</span>
+    </a>
+    <a href="#indir" style="color:#fff;font-weight:800;font-size:15px;padding:10px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.28);text-decoration:none">İndir</a>
+  </div>
+
+  <div style="max-width:1160px;margin:0 auto;padding:clamp(40px,8vw,88px) clamp(20px,5vw,40px) 0;display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:56px">
+    <div style="flex:1 1 360px;max-width:560px;padding-bottom:clamp(8px,6vw,96px);display:flex;flex-direction:column;gap:22px">
+      <span style="font-weight:800;font-size:14px;letter-spacing:.12em;color:rgba(255,255,255,.7)">TEMKİNLİ</span>
+      <h1 style="font-weight:900;font-size:clamp(40px,7vw,64px);line-height:1.04;letter-spacing:-0.02em;text-wrap:balance">Zor anlarda temkinli ol, adım adım ilerle.</h1>
+      <p style="font-size:clamp(17px,2vw,19px);color:rgba(255,255,255,.78);max-width:480px;text-wrap:pretty">Kaza, kayıp, arıza, resmi işler ve hayatın önemli anları için Türkiye'ye özel, internetsiz çalışan adım adım rehberler.</p>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:6px">
+        <span role="img" aria-label="Yakında App Store'da" style="display:inline-flex;align-items:center;gap:12px;min-height:58px;padding:0 24px;border-radius:18px;background:#fff;color:#16315c;font-weight:900;font-size:18px;text-decoration:none;box-shadow:0 12px 28px rgba(5,15,40,.3);cursor:default">
+          <i class="ph-fill ph-apple-logo" style="font-size:22px"></i>Yakında App Store'da
+        </span>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:rgba(255,255,255,.78)"><i class="ph-bold ph-wifi-slash" style="font-size:18px"></i>İnternetsiz de çalışır</span>
+      </div>
+    </div>
+    <div style="flex:0 1 320px;margin:0 auto;width:100%;max-width:320px;height:clamp(460px,52vw,560px);overflow:hidden">
+      <div style="padding:11px;border-radius:54px;background:#0a1322;box-shadow:0 30px 60px rgba(3,10,30,.45), inset 0 0 0 1.5px rgba(255,255,255,.12)">
+        <img src="assets/screen-home.png" alt="Temkinli ana ekranı: arama ve hızlı erişim kartları" style="display:block;width:100%;aspect-ratio:945/2048;object-fit:cover;border-radius:44px">
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="nasil" data-screen-label="Nasıl çalışır" style="padding:clamp(64px,10vw,112px) clamp(20px,5vw,40px)">
+  <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:44px">
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:620px">
+      <span style="font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--accent)">NASIL ÇALIŞIR</span>
+      <h2 style="font-weight:900;font-size:clamp(30px,5vw,44px);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">Üç adımda, sakin kafayla.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:20px">
+      <div style="background:var(--card);border-radius:26px;box-shadow:var(--sh);padding:26px 26px 0;display:flex;flex-direction:column;gap:10px;overflow:hidden">
+        <span style="width:40px;height:40px;border-radius:999px;background:var(--accent-bg);color:var(--accent);display:grid;place-items:center;font-weight:900;font-size:18px">1</span>
+        <h3 style="font-weight:800;font-size:21px;letter-spacing:-0.01em;margin-top:6px">Ne olduğunu seç ya da ara</h3>
+        <p style="color:var(--ink2)">"Kaza yaptım", "kartımı kaybettim" yaz ya da kategoriden bul.</p>
+        <div style="margin:22px auto 0;width:76%;max-width:240px;height:300px;overflow:hidden">
+          <div style="padding:8px;padding-bottom:0;border-radius:40px 40px 0 0;background:#0a1322"><img src="assets/screen-category.png" alt="Araç kategorisindeki rehberler" style="display:block;width:100%;aspect-ratio:945/2048;object-fit:cover;border-radius:32px 32px 0 0"></div>
+        </div>
+      </div>
+      <div style="background:var(--card);border-radius:26px;box-shadow:var(--sh);padding:26px 26px 0;display:flex;flex-direction:column;gap:10px;overflow:hidden">
+        <span style="width:40px;height:40px;border-radius:999px;background:var(--accent-bg);color:var(--accent);display:grid;place-items:center;font-weight:900;font-size:18px">2</span>
+        <h3 style="font-weight:800;font-size:21px;letter-spacing:-0.01em;margin-top:6px">Adımları sırayla işaretle</h3>
+        <p style="color:var(--ink2)">Her rehber kısa, net adımlara bölünmüş. Bitirdikçe işaretle.</p>
+        <div style="margin:22px auto 0;width:76%;max-width:240px;height:300px;overflow:hidden">
+          <div style="padding:8px;padding-bottom:0;border-radius:40px 40px 0 0;background:#0a1322"><img src="assets/screen-guide.png" alt="Lastik patladı rehberi" style="display:block;width:100%;aspect-ratio:945/2048;object-fit:cover;border-radius:32px 32px 0 0"></div>
+        </div>
+      </div>
+      <div style="background:var(--card);border-radius:26px;box-shadow:var(--sh);padding:26px 26px 0;display:flex;flex-direction:column;gap:10px;overflow:hidden">
+        <span style="width:40px;height:40px;border-radius:999px;background:var(--accent-bg);color:var(--accent);display:grid;place-items:center;font-weight:900;font-size:18px">3</span>
+        <h3 style="font-weight:800;font-size:21px;letter-spacing:-0.01em;margin-top:6px">Hiçbir şeyi unutma</h3>
+        <p style="color:var(--ink2)">Nerede kaldığını gör, önemli uyarıları kaçırma.</p>
+        <div style="margin:22px auto 0;width:76%;max-width:240px;height:300px;overflow:hidden">
+          <div style="padding:8px;padding-bottom:0;border-radius:40px 40px 0 0;background:#0a1322"><img src="assets/screen-guide-checked.png" alt="Tamamlanan adımlar işaretli rehber" style="display:block;width:100%;aspect-ratio:945/2048;object-fit:cover;object-position:top;border-radius:32px 32px 0 0"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kategoriler" data-screen-label="Kategoriler" style="background:var(--soft);padding:clamp(64px,10vw,112px) clamp(20px,5vw,40px)">
+  <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:640px">
+      <span style="font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--accent)">KATEGORİLER</span>
+      <h2 style="font-weight:900;font-size:clamp(30px,5vw,44px);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">120'den fazla rehber, tek yerde.</h2>
+      <p style="color:var(--ink2);text-wrap:pretty">Trafik kazasından su kaçağına, taşınmadan bebek doğumuna kadar hayatın beklenmedik ve önemli anları için.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,160px),1fr));gap:14px">
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#d34b43 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-siren" style="font-size:28px;color:#d34b43"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Acil &amp; Güvenlik</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#2f6fd0 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-car" style="font-size:28px;color:#2f6fd0"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Araç</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#1d9e6a 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-house" style="font-size:28px;color:#1d9e6a"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Ev &amp; Yaşam</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#c0613f 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-users-three" style="font-size:28px;color:#c0613f"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Hayat Olayları</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#3d8f7a 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-truck" style="font-size:28px;color:#3d8f7a"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Taşınma &amp; Kira</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#6b8a2a 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-backpack" style="font-size:28px;color:#6b8a2a"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Hazırlık</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#5a6fb0 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-briefcase" style="font-size:28px;color:#5a6fb0"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">İş Hayatı</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#d0566b 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-heartbeat" style="font-size:28px;color:#d0566b"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Sağlık &amp; Bakım</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#0e8a9e 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-file-text" style="font-size:28px;color:#0e8a9e"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Resmi İşler</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#7a59c2 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-wallet" style="font-size:28px;color:#7a59c2"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Finans</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#2e86a8 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-airplane-tilt" style="font-size:28px;color:#2e86a8"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Seyahat &amp; Yurtdışı</span></div>
+      <div style="background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:20px;display:flex;flex-direction:column;gap:16px;min-height:132px"><span style="width:52px;height:52px;border-radius:16px;background:color-mix(in srgb,#a8743a 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-paw-print" style="font-size:28px;color:#a8743a"></i></span><span style="font-weight:800;font-size:17px;line-height:1.25">Evcil Hayvan</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="neden" data-screen-label="Neden" style="padding:clamp(64px,10vw,112px) clamp(20px,5vw,40px)">
+  <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:620px">
+      <span style="font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--accent)">NEDEN TEMKİNLİ?</span>
+      <h2 style="font-weight:900;font-size:clamp(30px,5vw,44px);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">İhtiyacın olduğunda, hazır bekler.</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px">
+      <div style="background:var(--card);border-radius:24px;box-shadow:var(--sh);padding:26px;display:flex;flex-direction:column;gap:10px"><i class="ph-duotone ph-wifi-slash" style="font-size:32px;color:var(--accent)"></i><h3 style="font-weight:800;font-size:19px;margin-top:8px">İnternetsiz çalışır</h3><p style="color:var(--ink2);font-size:16px">Tüm rehberler cihazında. Çekmeyen yerde, bodrumda, yolda da açılır.</p></div>
+      <div style="background:var(--card);border-radius:24px;box-shadow:var(--sh);padding:26px;display:flex;flex-direction:column;gap:10px"><i class="ph-duotone ph-seal-check" style="font-size:32px;color:var(--accent)"></i><h3 style="font-weight:800;font-size:19px;margin-top:8px">Resmi kurallara göre, güncel</h3><p style="color:var(--ink2);font-size:16px">Türkiye'deki resmi kurallar ve süreçler esas alınarak hazırlanır, düzenli güncellenir.</p></div>
+      <div style="background:var(--card);border-radius:24px;box-shadow:var(--sh);padding:26px;display:flex;flex-direction:column;gap:10px"><i class="ph-duotone ph-hand-heart" style="font-size:32px;color:#1d9e6a"></i><h3 style="font-weight:800;font-size:19px;margin-top:8px">Acil rehberler hep ücretsiz</h3><p style="color:var(--ink2);font-size:16px">Acil durum rehberleri herkese, her zaman açık. Hiçbir koşula bağlı değil.</p></div>
+      <div style="background:var(--card);border-radius:24px;box-shadow:var(--sh);padding:26px;display:flex;flex-direction:column;gap:10px"><i class="ph-duotone ph-lock-key" style="font-size:32px;color:var(--accent)"></i><h3 style="font-weight:800;font-size:19px;margin-top:8px">Hesap gerekmez</h3><p style="color:var(--ink2);font-size:16px">Üyelik yok. Verilerin cihazında kalır; analitik yalnızca izin verirsen açılır.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="hazirlik" data-screen-label="Hazırlık" style="background:var(--soft);padding:clamp(64px,10vw,112px) clamp(20px,5vw,40px)">
+  <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:640px">
+      <span style="font-weight:800;font-size:13px;letter-spacing:.12em;color:#6b8a2a">HAZIRLIK</span>
+      <h2 style="font-weight:900;font-size:clamp(30px,5vw,44px);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">Temkinli ol, krizden önce hazır ol.</h2>
+      <p style="color:var(--ink2);text-wrap:pretty">Deprem çantasını hazırlayan, belgelerini yedekleyen temkinliler için. Sakin bir günde birkaç dakika ayır; zor an geldiğinde ne yapacağını zaten bilirsin.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px">
+      <div style="background:var(--card);border-radius:26px;box-shadow:var(--sh);padding:26px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:14px"><span style="width:48px;height:48px;flex:none;border-radius:15px;background:color-mix(in srgb,#6b8a2a 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-backpack" style="font-size:26px;color:#6b8a2a"></i></span><h3 style="font-weight:800;font-size:20px">Deprem çantası</h3></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;background:#1d9e6a;display:grid;place-items:center"><i class="ph-bold ph-check" style="font-size:15px;color:#fff"></i></span><span style="font-size:16px;color:var(--ink3);text-decoration:line-through">Su ve uzun ömürlü yiyecek</span></div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;border:2px solid var(--line);background:var(--card)"></span><span style="font-size:16px">El feneri ve yedek pil</span></div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;border:2px solid var(--line);background:var(--card)"></span><span style="font-size:16px">İlk yardım seti ve ilaçlar</span></div>
+        </div>
+      </div>
+      <div style="background:var(--card);border-radius:26px;box-shadow:var(--sh);padding:26px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:14px"><span style="width:48px;height:48px;flex:none;border-radius:15px;background:color-mix(in srgb,#c0613f 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-users-three" style="font-size:26px;color:#c0613f"></i></span><h3 style="font-weight:800;font-size:20px">Aile acil durum planı</h3></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;background:#1d9e6a;display:grid;place-items:center"><i class="ph-bold ph-check" style="font-size:15px;color:#fff"></i></span><span style="font-size:16px;color:var(--ink3);text-decoration:line-through">Buluşma noktası belirle</span></div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;background:#1d9e6a;display:grid;place-items:center"><i class="ph-bold ph-check" style="font-size:15px;color:#fff"></i></span><span style="font-size:16px;color:var(--ink3);text-decoration:line-through">Acil iletişim kişilerini paylaş</span></div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;border:2px solid var(--line);background:var(--card)"></span><span style="font-size:16px">En yakın toplanma alanını öğren</span></div>
+        </div>
+      </div>
+      <div style="background:var(--card);border-radius:26px;box-shadow:var(--sh);padding:26px;display:flex;flex-direction:column;gap:18px">
+        <div style="display:flex;align-items:center;gap:14px"><span style="width:48px;height:48px;flex:none;border-radius:15px;background:color-mix(in srgb,#0e8a9e 11%,transparent);display:grid;place-items:center"><i class="ph-duotone ph-files" style="font-size:26px;color:#0e8a9e"></i></span><h3 style="font-weight:800;font-size:20px">Önemli belgeleri yedekle</h3></div>
+        <div style="display:flex;flex-direction:column;gap:10px">
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;border:2px solid var(--line);background:var(--card)"></span><span style="font-size:16px">Kimlik, tapu ve ruhsat kopyaları</span></div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;border:2px solid var(--line);background:var(--card)"></span><span style="font-size:16px">Sigorta poliçeleri</span></div>
+          <div style="display:flex;align-items:center;gap:12px;background:var(--surface2);border-radius:16px;padding:12px 14px"><span style="width:24px;height:24px;flex:none;border-radius:8px;border:2px solid var(--line);background:var(--card)"></span><span style="font-size:16px">Güvenli bir dijital yedek</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pro" data-screen-label="Pro" style="padding:clamp(64px,10vw,112px) clamp(20px,5vw,40px)">
+  <div style="max-width:1160px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+    <div style="display:flex;flex-direction:column;gap:12px;max-width:640px">
+      <span style="font-weight:800;font-size:13px;letter-spacing:.12em;color:var(--accent)">FİYATLANDIRMA</span>
+      <h2 style="font-weight:900;font-size:clamp(30px,5vw,44px);line-height:1.1;letter-spacing:-0.02em;text-wrap:balance">Bir kez öde, hep senin olsun.</h2>
+      <p style="color:var(--ink2);text-wrap:pretty">Abonelik yok. Acil rehberler zaten ücretsiz; sakin anlarda okunan rehberler tek seferlik Lifetime Pro ile açılır.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:18px;max-width:900px">
+      <div style="background:var(--card);border-radius:26px;box-shadow:var(--sh);padding:30px;display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="align-self:flex-start;font-weight:800;font-size:13px;color:#fff;background:#1d9e6a;padding:4px 12px;border-radius:999px">Ücretsiz</span><h3 style="font-weight:900;font-size:26px;letter-spacing:-0.02em">Herkes için</h3></div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:16px">
+          <div style="display:flex;gap:10px"><i class="ph-bold ph-check" style="font-size:20px;color:#1d9e6a;flex:none;margin-top:1px"></i>Tüm acil durum rehberleri</div>
+          <div style="display:flex;gap:10px"><i class="ph-bold ph-check" style="font-size:20px;color:#1d9e6a;flex:none;margin-top:1px"></i>İnternetsiz kullanım</div>
+          <div style="display:flex;gap:10px"><i class="ph-bold ph-check" style="font-size:20px;color:#1d9e6a;flex:none;margin-top:1px"></i>Hesap ve üyelik gerekmez</div>
+        </div>
+      </div>
+      <div style="background:linear-gradient(135deg,#234b86,#16315c 60%,#0f2342);color:#fff;border-radius:26px;box-shadow:var(--sh2);padding:30px;display:flex;flex-direction:column;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="align-self:flex-start;font-weight:800;font-size:13px;color:#16315c;background:#fff;padding:4px 12px;border-radius:999px">Tek seferlik</span><h3 style="font-weight:900;font-size:26px;letter-spacing:-0.02em">Lifetime Pro</h3>
+          <span style="align-self:flex-start;margin-top:4px;font-family:ui-monospace,Menlo,monospace;font-size:14px;color:rgba(255,255,255,.85);border:1.5px dashed rgba(255,255,255,.4);border-radius:12px;padding:8px 14px">₺299</span></div>
+        <div style="display:flex;flex-direction:column;gap:12px;font-size:16px">
+          <div style="display:flex;gap:10px"><i class="ph-bold ph-check" style="font-size:20px;color:#5ee0c0;flex:none;margin-top:1px"></i>Ücretsiz sürümdeki her şey</div>
+          <div style="display:flex;gap:10px"><i class="ph-bold ph-check" style="font-size:20px;color:#5ee0c0;flex:none;margin-top:1px"></i>Planlama, resmi işler, hukuk ve finans rehberleri</div>
+          <div style="display:flex;gap:10px"><i class="ph-bold ph-check" style="font-size:20px;color:#5ee0c0;flex:none;margin-top:1px"></i>Rehberlerin PDF özeti</div>
+          <div style="display:flex;gap:10px"><i class="ph-bold ph-check" style="font-size:20px;color:#5ee0c0;flex:none;margin-top:1px"></i>Abonelik yok, yenileme yok</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="indir" data-screen-label="Kapanış" style="padding:0 clamp(12px,3vw,40px) clamp(40px,6vw,72px)">
+  <div style="max-width:1160px;margin:0 auto;border-radius:32px;overflow:hidden;color:#fff;padding:clamp(48px,8vw,88px) clamp(24px,6vw,72px);background:radial-gradient(circle at 90% 10%, rgba(143,182,255,.14), transparent 45%), radial-gradient(circle at 8% 92%, rgba(94,224,192,.12), transparent 42%), linear-gradient(135deg,#234b86 0%,#16315c 55%,#0f2342 100%);display:flex;flex-direction:column;align-items:flex-start;gap:22px">
+    <span style="width:52px;height:52px;border-radius:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);display:grid;place-items:center"><i class="ph-fill ph-compass" style="font-size:28px;color:#fff"></i></span>
+    <h2 style="font-weight:900;font-size:clamp(32px,5.5vw,52px);line-height:1.08;letter-spacing:-0.02em;max-width:720px;text-wrap:balance">Temkinli ol. İhtiyacın olduğunda internetsiz de yanında olsun.</h2>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:14px 20px;margin-top:8px">
+      <span role="img" aria-label="Yakında App Store'da" style="display:inline-flex;align-items:center;gap:12px;min-height:58px;padding:0 24px;border-radius:18px;background:#fff;color:#16315c;font-weight:900;font-size:18px;text-decoration:none;cursor:default">
+        <i class="ph-fill ph-apple-logo" style="font-size:22px"></i>Yakında App Store'da
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;color:rgba(255,255,255,.78)"><i class="ph-bold ph-wifi-slash" style="font-size:18px"></i>İnternetsiz de çalışır</span>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer style="padding:0 clamp(20px,5vw,40px) 40px">
+  <div style="max-width:1160px;margin:0 auto;border-top:1px solid var(--line);padding-top:28px;display:flex;flex-direction:column;gap:18px">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
+      <span style="font-weight:900;font-size:17px;letter-spacing:-0.02em">Temkinli</span>
+      <nav style="display:flex;flex-wrap:wrap;gap:8px 24px;font-weight:700;font-size:15px">
+        <a href="/gizlilik/">Gizlilik Politikası</a>
+        <a href="/kosullar/">Kullanım Koşulları</a>
+        <a href="mailto:info@temkinli.app">İletişim: info@temkinli.app</a>
+      </nav>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-size:14px;color:var(--ink2)">
+      <span>Rehberler bilgilendirme amaçlıdır; acil durumda 112'yi arayın.</span>
+      <span>© 2026 Temkinli</span>
+    </div>
+  </div>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;theme&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;auto&quot;,&quot;light&quot;,&quot;dark&quot;],&quot;default&quot;:&quot;auto&quot;,&quot;tsType&quot;:&quot;'auto'|'light'|'dark'&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    return { theme: this.props.theme ?? 'auto' };
+  }
+}
+</script>
+</body>
+</html>
